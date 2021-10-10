@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="./assets/favicon.ico">
+    <title>Manish Manwani</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+        emailjs.init("user_aTd4q2VCQRGa0eaJo0m5s");
+        })();
+    </script>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-container">
+            <header>
+                <a href="index.html" class="logo_link"><img src="./assets/manish-nobg.png" alt="logo"
+                        class="logo click"></a>
+
+                <nav>
+                    <ul>
+                        <li class="nav_link"><a href="#latest" class="nav_link-anchor click">My Skills</a></li>
+                        <li class="nav_link"><a href="#projects" class="nav_link-anchor click">My Projects</a></li>
+                        <li class="nav_link" onclick="toggleModal()"><a href="#" class="nav_link-anchor contact_link click" >Hire Me</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <div class="social_header">
+                <ul>
+                    <li class="social_link"><a href="" target="_blank" class="social_link-anchor"><i
+                                class="fab fa-linkedin-in click"></i></a>
+                    </li>
+                    <li class="social_link"><a href="https://github.com/ManishManwani36" target="_blank"
+                            class="social_link-anchor"><i class="fab fa-github click"></i></a>
+                    </li>
+                    <li class="social_link"><a href="./assets/Manish Manwani Resume.pdf" target="_blank"
+                            class="social_link-anchor"><i class="fas fa-file-pdf click"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main_page">
+        <div class="container">
+            <h1 class="stagger1">Building Web Applications with great User Experiences</h1>
+            <div class="name_intro stagger1 click" onclick="toggleModal()">Manish Manwani</div>
+
+            <a href="#latest" class="stagger1">
+                <svg class="scroll click" width="46" height="77" viewBox="0 0 46 77" fill="none">
+                    <rect x="2" y="2" width="42" height="73" rx="21" stroke="white" stroke-width="4"
+                        stroke-linejoin="round" />
+                    <circle class="circle" cx="23" cy="22" r="12" fill="white" />
+                </svg>
+            </a>
+
+        </div>
+
+        <svg class="main-graphic" width="648" height="486" viewBox="0 0 648 486" fill="none">
+            <rect class="shape-anim" x="162" width="162" height="162" rx="16" fill="white" />
+            <rect class="shape-anim" x="162" y="162" width="162" height="162" rx="16" fill="#2B3F41" />
+            <rect class="shape-anim" x="324" y="324" width="162" height="162" rx="16" fill="#2B3F41" />
+            <rect class="shape-anim" x="162" y="324" width="162" height="162" rx="16" fill="white" />
+            <rect class="shape-anim" x="324" width="162" height="162" rx="16" fill="#2B3F41" />
+            <rect class="shape-anim" x="486" y="162" width="162" height="162" rx="16" fill="#A3B3B5" />
+            <rect class="shape-anim" y="162" width="162" height="162" rx="16" fill="#A3B3B5" />
+            <rect class="shape-anim" x="324" y="162" width="162" height="162" rx="16" fill="white" />
+            <circle class="shape-anim bounce-vertical1" cx="320" cy="162" r="81" fill="#A3B3B5" fill-opacity="0.5" />
+            <circle class="shape-anim bounce-horizontal1" cx="162" cy="243" r="81" fill="#A3B3B5" fill-opacity="0.5" />
+            <circle class="shape-anim bounce-horizontal2" cx="486" cy="243" r="81" fill="#A3B3B5" fill-opacity="0.5" />
+            <circle class="shape-anim bounce-vertical2" cx="324" cy="324" r="81" fill="#A3B3B5" fill-opacity="0.5" />
+        </svg>
+    </div>
+
+    <button class="mail__btn click" onclick="toggleModal()">
+        <i class="fas fa-envelope"></i>
+    </button>
+
+    <div class="modal">
+        <div class="modal__half modal__about">
+            <h3 class="modal__title modal__title--about">Here's a bit about me.</h3>
+            <h4 class="modal__subtitle modal__sub-title--about">Frontend Software Engineer</h4>
+            <p class="modal__para">I'm a 19 year-old <b>frontend software engineer</b> based in Australia with a passion
+                for creating <b>beautiful and compelling projects.</b><br><br> I strive to surpass and improve my work
+                continuously while solving <b>challenging engineering problems </b>with a team of <b>talented </b>and <b>experienced</b>
+                software engineers every day. </p>
+        </div>
+        <div class="modal__half modal__contact">
+            <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
+            <h3 class="modal__title modal__title--contact">
+                Let's have a chat!
+            </h3>
+            <h4 class="modal__subtitle modal__sub-title--container">
+                I'm currently open to new opportunities.
+            </h4>
+            <form id="contact__form" onsubmit="contact(event)">
+                <div class="form__item">
+                    <lable class="form__item--label">Name</lable>
+                    <input type="text" name="user_name" class="input" required></input>
+                </div>
+                <div class="form__item">
+                    <lable class="form__item--label">Email</lable>
+                    <input type="email" name="user_email" class="input" required></input>
+                </div>
+                <div class="form__item">
+                    <lable class="form__item--label">Message</lable>
+                    <textarea type="text" name="message" class="input" required></textarea>
+                </div>
+                <button id="contact__submit" class="form__submit">Send it my way</button>
+            </form>
+            <div class="modal__overlay modal__overlay--loading ">
+                <i class="fas fa-spinner"></i>
+            </div>
+            <div class="modal__overlay modal__overlay--success">
+                Thanks for the message! Looking forward to speaking with you soon.
+            </div>
+        </div>
+    </div>
+
+    <section id="latest" class="latest">
+        <div class="left">
+            <div class="inner fade-in1">
+                <p class="subtitle">LATEST PROJECT</p>
+                <p class="latest-title">E-Commerce Website</p>
+
+                <p class="latest_desc">As a challenge I created an E-commerce website known as Lib-rare. Designed using
+                    HTML5, CSS3, JavaScript & React.js practices. This e-commerce library sells books to its target
+                    audience.</p>
+            </div>
+        </div>
+        <a href="" class="project-anchor fade-in1"><img class="right click_project" src="./assets/e-commerce.PNG"
+                alt="latest_project"></a>
+    </section>
+
+    <section class="tech-stack">
+        <div class="tech-stack_container fade-in1">
+            <div class="top">
+                <h1>My Technology Stack</h1>
+                <p class="tech-stack_description">Here are the technologies I am currently using in my work. I currently
+                    work on challenging frontend engineering problems with React, JavaScript and Vue.js as a Freelancer
+                </p>
+            </div>
+
+            <div class="tech__list">
+                <div class="tech">
+                    <figure class="tech__img--wrapper">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/512px-HTML5_Badge.svg.png"
+                            alt="" class="tech__img">
+                    </figure>
+                    <span class="tech__name">HTML</span>
+                </div>
+                <div class="tech">
+                    <figure class="tech__img--wrapper">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/800px-CSS3_logo.svg.png"
+                            alt="" class="tech__img">
+                    </figure>
+                    <span class="tech__name">CSS</span>
+                </div>
+                <div class="tech">
+                    <figure class="tech__img--wrapper">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/512px-Unofficial_JavaScript_logo_2.svg.png"
+                            alt="" class="tech__img">
+                    </figure>
+                    <span class="tech__name">JavaScript</span>
+                </div>
+                <div class="tech">
+                    <figure class="tech__img--wrapper">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/512px-Vue.js_Logo_2.svg.png"
+                            alt="" class="tech__img">
+                    </figure>
+                    <span class="tech__name">Vue.js</span>
+                </div>
+                <div class="tech">
+                    <figure class="tech__img--wrapper">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/512px-Bootstrap_logo.svg.png"
+                            alt="" class="tech__img">
+                    </figure>
+                    <span class="tech__name">Bootstrap</span>
+                </div>
+                <div class="tech">
+                    <figure class="tech__img--wrapper">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/React.svg/512px-React.svg.png"
+                            alt="" class="tech__img">
+                    </figure>
+                    <span class="tech__name">React.js</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="project-container">
+            <div class="project-left">
+                <div class="inner fade-in2">
+                    <p class="subtitle">LOCAL BUSINESS LANDING PAGE</p>
+                    <p class="latest-title">BLENDD&CO.</p>
+
+                    <p class="latest_desc">BLENDD&CO. is a local beauty salon for women. They specialize in styling
+                        blonde and balayage hair in Adelaide, South Australia. As a new frontend engineer, I took up the
+                        challenge of designing a landing page for them. This was one of my first projects using
+                        HTML5, CSS3 and Bootstrap while implementing best practices in terms of UI and UX design.</p>
+                </div>
+            </div>
+            <a href="https://manishmanwani36.github.io/BlenddAndCo-website/" target="_blank"
+                class="project-anchor fade-in2"><img class="right click_project" src="./assets/blenddandco.PNG"
+                    alt="latest_project"></a>
+        </div>
+
+        <div class="project-container">
+            <div class="project-left">
+                <div class="inner fade-in2">
+                    <p class="subtitle">Photography Portfolio</p>
+                    <p class="latest-title">Manish Photography</p>
+
+                    <p class="latest_desc">Photography has been one the first places I was able to express my
+                        creativity. I have had over 5 years of experience in it and it has taught me so much, not only
+                        with regards to cameras and editing but also the procedural workflow in any aspect of creative
+                        work. Thus I created a website dedicated to showcasing my photography.</p>
+                </div>
+            </div>
+            <a href="" class="project-anchor fade-in2"><img class="right click_project" src="./assets/e-commerce.PNG"
+                    alt="latest_project"></a>
+        </div>
+
+        <div class="project-container">
+            <div class="project-left">
+                <div class="inner fade-in2">
+                    <p class="subtitle">Freelance project</p>
+                    <p class="latest-title">Freelance Local Business</p>
+
+                    <p class="latest_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor
+                        incididunt ut labore et dolore magna aliqua. Morbi tempus iaculis urna id volutpat lacus laoreet
+                        non. </p>
+                </div>
+            </div>
+            <a href="" class="project-anchor fade-in2"><img class="right click_project" src="./assets/e-commerce.PNG"
+                    alt="latest_project"></a>
+        </div>
+    </section>
+
+    <section class="footer">
+        <div class="footer-items">
+            <div class="footer-logo fade-in2"><a href="#"><img src="./assets/manish-nobg.png" alt=""
+                        class="logo click"></a></div>
+
+            <div class="footer-links">
+                <ul>
+                    <li class="click"><a href="" target="_blank" class="footer-link">LinkedIn</a></li>
+                    <li class="click"><a href="https://github.com/ManishManwani36" target="_blank"
+                            class="footer-link">GitHub</a></li>
+                    <li class="click"><a href="./assets/Manish Manwani Resume.pdf" target="_blank"
+                            class="footer-link">Resume</a></li>
+                    <li class="click" onclick="toggleModal()"><a href="#" class="footer-link contact_link">Hire Me</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-copyright">Copyright © 2021 Manish Manwani</div>
+
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"
+        integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"
+        integrity="sha512-CPA5LMoJI/a5HkSIAKcBtFXe4gqGjPUL2ExF/3PmhrrHI17wod9xOqqF+0WZQRKIIq0KwF8oG5BaiWobtrke3A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
